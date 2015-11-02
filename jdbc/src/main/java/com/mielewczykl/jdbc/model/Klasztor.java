@@ -1,30 +1,35 @@
 package com.mielewczykl.jdbc.model;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
-
 public class Klasztor {
-	Klasztor() {
-		try {
-			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			Connection db = DriverManager.getConnection("jdbc:sqlserver://eos.inf.ug.edu.pl;databaseName=lmielewczyk;trustServerCertificate=true", "lmielewczyk", "224701");
-			Statement st = db.createStatement();
-			st.execute("INSERT INTO religia(religia, opis) VALUES ('string', 'string');");
-			st.execute("INSERT INTO klasztor(id_religia, nazwa, kontakt) VALUES (1, 'string', 'string');");
-			st.close();
-			db.close();
-			}
-		catch (SQLException sqle)
-		{
-		}
-		catch (ClassNotFoundException cnfe)
-		{
-		}
+	private long id;
+	private String name;
+	private int yob;
+
+	public Klasztor() {
 	}
-	public static void main(String[] args)
-	{
-		new Klasztor();
+
+	public Klasztor(String name, int yob) {
+		super();
+		this.name = name;
+		this.yob = yob;
+	}
+
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getYob() {
+		return yob;
+	}
+	public void setYob(int yob) {
+		this.yob = yob;
 	}
 }
