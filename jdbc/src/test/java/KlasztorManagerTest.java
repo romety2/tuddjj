@@ -2,6 +2,8 @@ import java.util.List;
 import org.junit.Test;
 import com.mielewczykl.jdbc.model.Klasztor;
 import com.mielewczykl.jdbc.model.KlasztorManager;
+import com.mielewczykl.jdbc.model.Religia;
+import com.mielewczykl.jdbc.model.ReligiaManager;
 import static org.junit.Assert.*;
 
 
@@ -9,8 +11,8 @@ public class KlasztorManagerTest {
 
     KlasztorManager klasztorManager = new KlasztorManager();
 
-    private final static String NAME_1 = "Zenek";
-    private final static int YOB_1 = 1945;
+    private final static String nazwa = "string";
+    private final static String kontakt = "string";
 
     @Test
     public void checkConnection(){
@@ -20,16 +22,16 @@ public class KlasztorManagerTest {
     @Test
     public void checkAdding(){
 
-        Klasztor klasztor = new Klasztor(NAME_1, YOB_1);
+        Klasztor klasztor = new Klasztor(nazwa, kontakt);
 
-        klasztorManager.clearPersons();
-        assertEquals(1, klasztorManager.addPerson(klasztor));
+        klasztorManager.UsunWszystko();
+        assertEquals(1, klasztorManager.DodajWartosc(klasztor));
 
-        List<Klasztor> klasztors = klasztorManager.getAllPersons();
-        Klasztor klasztorRetrieved = klasztors.get(0);
+        List<Klasztor> klasztory = klasztorManager.DajWszystkieDane();
+        Klasztor klasztorRetrieved = klasztory.get(0);
 
-        assertEquals(NAME_1, klasztorRetrieved.getName());
-        assertEquals(YOB_1, klasztorRetrieved.getYob());
+        assertEquals(nazwa, klasztorRetrieved.getNazwa());
+        assertEquals(kontakt, klasztorRetrieved.getKontakt());
 
     }
 }

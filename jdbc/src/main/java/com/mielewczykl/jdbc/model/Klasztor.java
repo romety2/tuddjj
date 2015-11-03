@@ -2,16 +2,16 @@ package com.mielewczykl.jdbc.model;
 
 public class Klasztor {
 	private long id;
-	private String name;
-	private int yob;
+	private Religia religia;
+	private String nazwa;
+	private String kontakt;
 
 	public Klasztor() {
 	}
 
-	public Klasztor(String name, int yob) {
-		super();
-		this.name = name;
-		this.yob = yob;
+	public Klasztor(String nazwa, String kontakt) {
+		this.nazwa = nazwa;
+		this.kontakt = kontakt;
 	}
 
 	public long getId() {
@@ -20,16 +20,22 @@ public class Klasztor {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+	public Religia getReligia() {
+		return religia;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setReligia(Religia religia) {
+		this.religia = religia;
 	}
-	public int getYob() {
-		return yob;
+	public String getNazwa() {
+		return nazwa;
 	}
-	public void setYob(int yob) {
-		this.yob = yob;
+	public void setNazwa(String nazwa) {
+		this.nazwa = nazwa;
+	}
+	public String getKontakt() {
+		return kontakt;
+	}
+	public void setKontakt(String kontakt) {
+		this.kontakt = kontakt;
 	}
 }

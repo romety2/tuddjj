@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KlasztorManager {
+public class ReligiaManager {
 
     private Connection con;
     private Statement st;
@@ -13,13 +13,13 @@ public class KlasztorManager {
     private String login = "lmielewczyk";
     private String haslo = "224701";
 
-    private String UtworzTabele = "CREATE TABLE klasztor(id INT IDENTITY(1,1) PRIMARY KEY, id_religia INT REFERENCES religia (id), nazwa  VARCHAR(100), kontakt  VARCHAR(100));";
+    private String UtworzTabele = "CREATE TABLE religia(id INT IDENTITY(1,1) PRIMARY KEY, religia VARCHAR(30), opis VARCHAR(1000));";
 
     private PreparedStatement dodajWartosc;
     private PreparedStatement usunWszystko;
     private PreparedStatement wyswietlWszystko;
 
-    public KlasztorManager()
+    public ReligiaManager()
     {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -28,7 +28,7 @@ public class KlasztorManager {
             ResultSet rs = con.getMetaData().getTables(null, null, null, null);
             boolean utworzono = false;
             while (rs.next()) {
-                if ("Klasztor".equalsIgnoreCase(rs.getString("TABLE_NAME")))
+                if ("Religia".equalsIgnoreCase(rs.getString("TABLE_NAME")))
                 {
                     utworzono = true;
                     break;
@@ -36,9 +36,9 @@ public class KlasztorManager {
             }
             if (!utworzono)
                 st.executeUpdate(UtworzTabele);
-            dodajWartosc = con.prepareStatement("INSERT INTO klasztor(id_religia, nazwa, kontakt) VALUES (?, ?, ?);");
-            usunWszystko = con.prepareStatement("DELETE FROM Klasztor;");
-            wyswietlWszystko = con.prepareStatement("SELECT id, id_religia, nazwa, kontakt FROM Klasztor;");
+            dodajWartosc = con.prepareStatement("INSERT INTO religia(religia, opis) VALUES (?, ?);");
+            usunWszystko = con.prepareStatement("DELETE FROM Religia;");
+            wyswietlWszystko = con.prepareStatement("SELECT id, religia, opis FROM Religia;");
         } catch (SQLException sqle) {
         } catch (ClassNotFoundException cnfe) {
         }
@@ -56,12 +56,11 @@ public class KlasztorManager {
         }
     }
 
-    public int DodajWartosc(Klasztor klasztor) {
+    public int DodajWartosc(Religia religia) {
         int count = 0;
         try {
-            //dodajWartosc.setInt(1, klasztor.getReligia()); -- relacja
-            dodajWartosc.setString(2, klasztor.getNazwa());
-            dodajWartosc.setString(3, klasztor.getKontakt());
+            dodajWartosc.setString(1, religia.getReligia());
+            dodajWartosc.setString(2, religia.getOpis());
 
             count = dodajWartosc.executeUpdate();
 
@@ -71,24 +70,23 @@ public class KlasztorManager {
         return count;
     }
 
-    public List<Klasztor> DajWszystkieDane() {
-        List<Klasztor> klasztory = new ArrayList<Klasztor>();
+    public List<Religia> DajWszystkieDane() {
+        List<Religia> religie = new ArrayList<Religia>();
 
         try {
             ResultSet rs = wyswietlWszystko.executeQuery();
 
             while (rs.next()) {
-                Klasztor k = new Klasztor();
-                k.setId(rs.getInt("id"));
-                //k.setReligia(rs.getInt("id_religia")); -relacja
-                k.setNazwa(rs.getString("nazwa"));
-                k.setKontakt(rs.getString("kontakt"));
-                klasztory.add(k);
+                Religia r = new Religia();
+                r.setId(rs.getInt("id"));
+                r.setReligia(rs.getString("religia"));
+                r.setOpis(rs.getString("opis"));
+                religie.add(r);
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return klasztory;
+        return religie;
     }
 }
