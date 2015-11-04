@@ -27,48 +27,11 @@
       <file leaf-file-name="Klasztor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Klasztor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.839286">
+            <state vertical-scroll-proportion="0.0">
               <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
               <folding>
-                <element signature="e#396#397#0" expanded="true" />
-                <element signature="e#412#413#0" expanded="true" />
-                <element signature="e#442#443#0" expanded="true" />
-                <element signature="e#461#462#0" expanded="true" />
-                <element signature="e#492#493#0" expanded="true" />
-                <element signature="e#513#514#0" expanded="true" />
-                <element signature="e#556#557#0" expanded="true" />
-                <element signature="e#585#586#0" expanded="true" />
-                <element signature="e#613#614#0" expanded="true" />
-                <element signature="e#632#633#0" expanded="true" />
-                <element signature="e#670#671#0" expanded="true" />
-                <element signature="e#695#696#0" expanded="true" />
-                <element signature="e#725#726#0" expanded="true" />
-                <element signature="e#746#747#0" expanded="true" />
                 <element signature="e#788#789#0" expanded="true" />
                 <element signature="e#817#818#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Religia.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Religia.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.413794">
-              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#356#357#0" expanded="true" />
-                <element signature="e#381#382#0" expanded="true" />
-                <element signature="e#414#415#0" expanded="true" />
-                <element signature="e#442#443#0" expanded="true" />
-                <element signature="e#476#477#0" expanded="true" />
-                <element signature="e#506#507#0" expanded="true" />
-                <element signature="e#589#590#0" expanded="true" />
-                <element signature="e#619#620#0" expanded="true" />
-                <element signature="e#646#647#0" expanded="true" />
-                <element signature="e#685#686#0" expanded="true" />
-                <element signature="e#717#718#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,14 +40,17 @@
       <file leaf-file-name="ReligiaManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/ReligiaManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.862069">
-              <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1446602202071" expanded="true" signature="428:523" placeholder="CREATE TABLE..religia..." />
-                <marker date="1446602202071" expanded="true" signature="1364:1412" placeholder="INSERT INTO ..." />
-                <marker date="1446602202071" expanded="true" signature="1466:1485" placeholder="DELETE FROM ..." />
-                <marker date="1446602202071" expanded="true" signature="1543:1564" placeholder="SELECT id, r..religia..." />
+                <marker date="1446667109206" expanded="true" signature="441:536" placeholder="CREATE TABLE..religia..." />
+                <marker date="1446667109206" expanded="true" signature="1377:1425" placeholder="INSERT INTO ..." />
+                <marker date="1446667109206" expanded="true" signature="1479:1498" placeholder="DELETE FROM ..." />
+                <marker date="1446667109206" expanded="true" signature="1556:1577" placeholder="SELECT id, r..religia..." />
+                <marker date="1446667109206" expanded="true" signature="2020:2051" placeholder="DELETE FROM ..." />
+                <marker date="1446667109206" expanded="true" signature="2020:2052" placeholder="DELETE FROM ..." />
+                <marker date="1446667109206" expanded="true" signature="3786:3818" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
@@ -93,18 +59,17 @@
       <file leaf-file-name="KlasztorManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/KlasztorManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6010101">
-              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.5580808">
+              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1776#1777#0" expanded="true" />
-                <element signature="e#1802#1803#0" expanded="true" />
-                <marker date="1446602217895" expanded="true" signature="429:568" placeholder="CREATE TABLE..klasztor..." />
-                <marker date="1446602217895" expanded="true" signature="1411:1476" placeholder="INSERT INTO ..." />
-                <marker date="1446602217895" expanded="true" signature="1411:1478" placeholder="INSERT INTO ..." />
-                <marker date="1446602217895" expanded="true" signature="1530:1542" placeholder="DELETE FROM ..." />
-                <marker date="1446602217895" expanded="true" signature="1530:1550" placeholder="DELETE FROM ..." />
-                <marker date="1446602217895" expanded="true" signature="1608:1630" placeholder="SELECT id, n..Person..." />
+                <element signature="e#2516#2526#0" expanded="true" />
+                <marker date="1446667096285" expanded="true" signature="442:581" placeholder="CREATE TABLE..klasztor..." />
+                <marker date="1446667096285" expanded="true" signature="1424:1489" placeholder="INSERT INTO ..." />
+                <marker date="1446667096285" expanded="true" signature="1424:1491" placeholder="INSERT INTO ..." />
+                <marker date="1446667096285" expanded="true" signature="1543:1555" placeholder="DELETE FROM ..." />
+                <marker date="1446667096285" expanded="true" signature="1543:1563" placeholder="DELETE FROM ..." />
+                <marker date="1446667096285" expanded="true" signature="1621:1643" placeholder="SELECT id, n..Person..." />
               </folding>
             </state>
           </provider>
@@ -113,8 +78,8 @@
       <file leaf-file-name="KlasztorManagerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/KlasztorManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="15" />
+            <state vertical-scroll-proportion="-9.068966">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,10 +91,20 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/ReligiaManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Religia.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Religia.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,12 +126,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Klasztor.java" />
+        <option value="$PROJECT_DIR$/src/test/java/KlasztorManagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Religia.java" />
         <option value="$PROJECT_DIR$/src/test/java/ReligiaManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/KlasztorManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Klasztor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/ReligiaManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/KlasztorManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/ReligiaManager.java" />
       </list>
     </option>
   </component>
@@ -217,14 +192,16 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files">
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jdbc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jdbc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -319,20 +296,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jdbc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jdbc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -351,7 +326,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.KlasztorManagerTest">
+  <component name="RunManager" selected="JUnit.ReligiaManagerTest">
     <configuration default="false" name="ReligiaManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="jdbc" />
@@ -693,12 +668,15 @@
       <workItem from="1446466960057" duration="20195000" />
       <workItem from="1446509837039" duration="39000" />
       <workItem from="1446542107439" duration="7300000" />
-      <workItem from="1446571515293" duration="16916000" />
+      <workItem from="1446571515293" duration="17472000" />
+      <workItem from="1446603023116" duration="85000" />
+      <workItem from="1446623360110" duration="2640000" />
+      <workItem from="1446632078959" duration="10157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57582000" />
+    <option name="totallyTimeSpent" value="71020000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="2" width="1296" height="768" extended-state="1" />
@@ -710,7 +688,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1765625" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.178125" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31363636" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -751,12 +729,6 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/ReligiaManager.java</url>
-          <line>93</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/KlasztorManagerTest.java</url>
           <line>24</line>
           <properties />
@@ -778,25 +750,219 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Religia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/ReligiaManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1446667109206" expanded="true" signature="441:536" placeholder="CREATE TABLE..religia..." />
+            <marker date="1446667109206" expanded="true" signature="1377:1425" placeholder="INSERT INTO ..." />
+            <marker date="1446667109206" expanded="true" signature="1479:1498" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="1556:1577" placeholder="SELECT id, r..religia..." />
+            <marker date="1446667109206" expanded="true" signature="2020:2051" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="2020:2052" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="3786:3818" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/KlasztorManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2516#2526#0" expanded="true" />
+            <marker date="1446667096285" expanded="true" signature="442:581" placeholder="CREATE TABLE..klasztor..." />
+            <marker date="1446667096285" expanded="true" signature="1424:1489" placeholder="INSERT INTO ..." />
+            <marker date="1446667096285" expanded="true" signature="1424:1491" placeholder="INSERT INTO ..." />
+            <marker date="1446667096285" expanded="true" signature="1543:1555" placeholder="DELETE FROM ..." />
+            <marker date="1446667096285" expanded="true" signature="1543:1563" placeholder="DELETE FROM ..." />
+            <marker date="1446667096285" expanded="true" signature="1621:1643" placeholder="SELECT id, n..Person..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/KlasztorManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ReligiaManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Klasztor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+          <folding>
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Religia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/ReligiaManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1446667109206" expanded="true" signature="441:536" placeholder="CREATE TABLE..religia..." />
+            <marker date="1446667109206" expanded="true" signature="1377:1425" placeholder="INSERT INTO ..." />
+            <marker date="1446667109206" expanded="true" signature="1479:1498" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="1556:1577" placeholder="SELECT id, r..religia..." />
+            <marker date="1446667109206" expanded="true" signature="2020:2051" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="2020:2052" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="3786:3818" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/KlasztorManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2516#2526#0" expanded="true" />
+            <marker date="1446667096285" expanded="true" signature="442:581" placeholder="CREATE TABLE..klasztor..." />
+            <marker date="1446667096285" expanded="true" signature="1424:1489" placeholder="INSERT INTO ..." />
+            <marker date="1446667096285" expanded="true" signature="1424:1491" placeholder="INSERT INTO ..." />
+            <marker date="1446667096285" expanded="true" signature="1543:1555" placeholder="DELETE FROM ..." />
+            <marker date="1446667096285" expanded="true" signature="1543:1563" placeholder="DELETE FROM ..." />
+            <marker date="1446667096285" expanded="true" signature="1621:1643" placeholder="SELECT id, n..Person..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/KlasztorManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ReligiaManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Klasztor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+          <folding>
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Religia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/ReligiaManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1446667109206" expanded="true" signature="441:536" placeholder="CREATE TABLE..religia..." />
+            <marker date="1446667109206" expanded="true" signature="1377:1425" placeholder="INSERT INTO ..." />
+            <marker date="1446667109206" expanded="true" signature="1479:1498" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="1556:1577" placeholder="SELECT id, r..religia..." />
+            <marker date="1446667109206" expanded="true" signature="2020:2051" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="2020:2052" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="3786:3818" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/KlasztorManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2516#2526#0" expanded="true" />
+            <marker date="1446667096285" expanded="true" signature="442:581" placeholder="CREATE TABLE..klasztor..." />
+            <marker date="1446667096285" expanded="true" signature="1424:1489" placeholder="INSERT INTO ..." />
+            <marker date="1446667096285" expanded="true" signature="1424:1491" placeholder="INSERT INTO ..." />
+            <marker date="1446667096285" expanded="true" signature="1543:1555" placeholder="DELETE FROM ..." />
+            <marker date="1446667096285" expanded="true" signature="1543:1563" placeholder="DELETE FROM ..." />
+            <marker date="1446667096285" expanded="true" signature="1621:1643" placeholder="SELECT id, n..Person..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/KlasztorManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ReligiaManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Klasztor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
             <element signature="e#788#789#0" expanded="true" />
             <element signature="e#817#818#0" expanded="true" />
           </folding>
@@ -807,20 +973,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -830,14 +983,13 @@
           <caret line="82" column="33" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1776#1777#0" expanded="true" />
-            <element signature="e#1802#1803#0" expanded="true" />
-            <marker date="1446602217895" expanded="true" signature="429:568" placeholder="CREATE TABLE..klasztor..." />
-            <marker date="1446602217895" expanded="true" signature="1411:1476" placeholder="INSERT INTO ..." />
-            <marker date="1446602217895" expanded="true" signature="1411:1478" placeholder="INSERT INTO ..." />
-            <marker date="1446602217895" expanded="true" signature="1530:1542" placeholder="DELETE FROM ..." />
-            <marker date="1446602217895" expanded="true" signature="1530:1550" placeholder="DELETE FROM ..." />
-            <marker date="1446602217895" expanded="true" signature="1608:1630" placeholder="SELECT id, n..Person..." />
+            <element signature="e#2516#2526#0" expanded="true" />
+            <marker date="1446667096285" expanded="true" signature="442:581" placeholder="CREATE TABLE..klasztor..." />
+            <marker date="1446667096285" expanded="true" signature="1424:1489" placeholder="INSERT INTO ..." />
+            <marker date="1446667096285" expanded="true" signature="1424:1491" placeholder="INSERT INTO ..." />
+            <marker date="1446667096285" expanded="true" signature="1543:1555" placeholder="DELETE FROM ..." />
+            <marker date="1446667096285" expanded="true" signature="1543:1563" placeholder="DELETE FROM ..." />
+            <marker date="1446667096285" expanded="true" signature="1621:1643" placeholder="SELECT id, n..Person..." />
           </folding>
         </state>
       </provider>
@@ -848,10 +1000,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1446602202071" expanded="true" signature="428:523" placeholder="CREATE TABLE..religia..." />
-            <marker date="1446602202071" expanded="true" signature="1364:1412" placeholder="INSERT INTO ..." />
-            <marker date="1446602202071" expanded="true" signature="1466:1485" placeholder="DELETE FROM ..." />
-            <marker date="1446602202071" expanded="true" signature="1543:1564" placeholder="SELECT id, r..religia..." />
+            <marker date="1446667109206" expanded="true" signature="441:536" placeholder="CREATE TABLE..religia..." />
+            <marker date="1446667109206" expanded="true" signature="1377:1425" placeholder="INSERT INTO ..." />
+            <marker date="1446667109206" expanded="true" signature="1479:1498" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="1556:1577" placeholder="SELECT id, r..religia..." />
+            <marker date="1446667109206" expanded="true" signature="2020:2051" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="2020:2052" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="3786:3818" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
@@ -881,20 +1036,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="26" />
           <folding>
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
             <element signature="e#788#789#0" expanded="true" />
             <element signature="e#817#818#0" expanded="true" />
           </folding>
@@ -905,20 +1046,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -928,14 +1056,13 @@
           <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1776#1777#0" expanded="true" />
-            <element signature="e#1802#1803#0" expanded="true" />
-            <marker date="1446602217895" expanded="true" signature="429:568" placeholder="CREATE TABLE..klasztor..." />
-            <marker date="1446602217895" expanded="true" signature="1411:1476" placeholder="INSERT INTO ..." />
-            <marker date="1446602217895" expanded="true" signature="1411:1478" placeholder="INSERT INTO ..." />
-            <marker date="1446602217895" expanded="true" signature="1530:1542" placeholder="DELETE FROM ..." />
-            <marker date="1446602217895" expanded="true" signature="1530:1550" placeholder="DELETE FROM ..." />
-            <marker date="1446602217895" expanded="true" signature="1608:1630" placeholder="SELECT id, n..Person..." />
+            <element signature="e#2516#2526#0" expanded="true" />
+            <marker date="1446667096285" expanded="true" signature="442:581" placeholder="CREATE TABLE..klasztor..." />
+            <marker date="1446667096285" expanded="true" signature="1424:1489" placeholder="INSERT INTO ..." />
+            <marker date="1446667096285" expanded="true" signature="1424:1491" placeholder="INSERT INTO ..." />
+            <marker date="1446667096285" expanded="true" signature="1543:1555" placeholder="DELETE FROM ..." />
+            <marker date="1446667096285" expanded="true" signature="1543:1563" placeholder="DELETE FROM ..." />
+            <marker date="1446667096285" expanded="true" signature="1621:1643" placeholder="SELECT id, n..Person..." />
           </folding>
         </state>
       </provider>
@@ -946,10 +1073,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1446602202071" expanded="true" signature="428:523" placeholder="CREATE TABLE..religia..." />
-            <marker date="1446602202071" expanded="true" signature="1364:1412" placeholder="INSERT INTO ..." />
-            <marker date="1446602202071" expanded="true" signature="1466:1485" placeholder="DELETE FROM ..." />
-            <marker date="1446602202071" expanded="true" signature="1543:1564" placeholder="SELECT id, r..religia..." />
+            <marker date="1446667109206" expanded="true" signature="441:536" placeholder="CREATE TABLE..religia..." />
+            <marker date="1446667109206" expanded="true" signature="1377:1425" placeholder="INSERT INTO ..." />
+            <marker date="1446667109206" expanded="true" signature="1479:1498" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="1556:1577" placeholder="SELECT id, r..religia..." />
+            <marker date="1446667109206" expanded="true" signature="2020:2051" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="2020:2052" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="3786:3818" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
@@ -969,20 +1099,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="26" />
           <folding>
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
             <element signature="e#788#789#0" expanded="true" />
             <element signature="e#817#818#0" expanded="true" />
           </folding>
@@ -993,20 +1109,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,14 +1119,13 @@
           <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1776#1777#0" expanded="true" />
-            <element signature="e#1802#1803#0" expanded="true" />
-            <marker date="1446602217895" expanded="true" signature="429:568" placeholder="CREATE TABLE..klasztor..." />
-            <marker date="1446602217895" expanded="true" signature="1411:1476" placeholder="INSERT INTO ..." />
-            <marker date="1446602217895" expanded="true" signature="1411:1478" placeholder="INSERT INTO ..." />
-            <marker date="1446602217895" expanded="true" signature="1530:1542" placeholder="DELETE FROM ..." />
-            <marker date="1446602217895" expanded="true" signature="1530:1550" placeholder="DELETE FROM ..." />
-            <marker date="1446602217895" expanded="true" signature="1608:1630" placeholder="SELECT id, n..Person..." />
+            <element signature="e#2516#2526#0" expanded="true" />
+            <marker date="1446667096285" expanded="true" signature="442:581" placeholder="CREATE TABLE..klasztor..." />
+            <marker date="1446667096285" expanded="true" signature="1424:1489" placeholder="INSERT INTO ..." />
+            <marker date="1446667096285" expanded="true" signature="1424:1491" placeholder="INSERT INTO ..." />
+            <marker date="1446667096285" expanded="true" signature="1543:1555" placeholder="DELETE FROM ..." />
+            <marker date="1446667096285" expanded="true" signature="1543:1563" placeholder="DELETE FROM ..." />
+            <marker date="1446667096285" expanded="true" signature="1621:1643" placeholder="SELECT id, n..Person..." />
           </folding>
         </state>
       </provider>
@@ -1034,10 +1136,13 @@
           <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1446602202071" expanded="true" signature="428:523" placeholder="CREATE TABLE..religia..." />
-            <marker date="1446602202071" expanded="true" signature="1364:1412" placeholder="INSERT INTO ..." />
-            <marker date="1446602202071" expanded="true" signature="1466:1485" placeholder="DELETE FROM ..." />
-            <marker date="1446602202071" expanded="true" signature="1543:1564" placeholder="SELECT id, r..religia..." />
+            <marker date="1446667109206" expanded="true" signature="441:536" placeholder="CREATE TABLE..religia..." />
+            <marker date="1446667109206" expanded="true" signature="1377:1425" placeholder="INSERT INTO ..." />
+            <marker date="1446667109206" expanded="true" signature="1479:1498" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="1556:1577" placeholder="SELECT id, r..religia..." />
+            <marker date="1446667109206" expanded="true" signature="2020:2051" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="2020:2052" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="3786:3818" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
@@ -1057,20 +1162,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
             <element signature="e#788#789#0" expanded="true" />
             <element signature="e#817#818#0" expanded="true" />
           </folding>
@@ -1082,20 +1173,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
             <element signature="e#788#789#0" expanded="true" />
             <element signature="e#817#818#0" expanded="true" />
           </folding>
@@ -1107,20 +1184,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
             <element signature="e#788#789#0" expanded="true" />
             <element signature="e#817#818#0" expanded="true" />
           </folding>
@@ -1132,20 +1195,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
             <element signature="e#788#789#0" expanded="true" />
             <element signature="e#817#818#0" expanded="true" />
           </folding>
@@ -1157,20 +1206,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
             <element signature="e#788#789#0" expanded="true" />
             <element signature="e#817#818#0" expanded="true" />
           </folding>
@@ -1189,7 +1224,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33152175">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1197,7 +1231,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33152175">
           <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1205,7 +1238,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4516129">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,7 +1245,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5073314">
           <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1221,7 +1252,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7562327">
           <caret line="327" column="0" selection-start-line="327" selection-start-column="0" selection-end-line="327" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1229,6 +1259,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Religia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1236,7 +1273,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/ReligiaManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1245,54 +1282,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/KlasztorManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="15" />
+        <state vertical-scroll-proportion="-9.068966">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Religia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.413794">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/Klasztor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.839286">
+        <state vertical-scroll-proportion="0.0">
           <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
           <folding>
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
             <element signature="e#788#789#0" expanded="true" />
             <element signature="e#817#818#0" expanded="true" />
           </folding>
@@ -1301,32 +1303,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/ReligiaManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.862069">
-          <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1446602202071" expanded="true" signature="428:523" placeholder="CREATE TABLE..religia..." />
-            <marker date="1446602202071" expanded="true" signature="1364:1412" placeholder="INSERT INTO ..." />
-            <marker date="1446602202071" expanded="true" signature="1466:1485" placeholder="DELETE FROM ..." />
-            <marker date="1446602202071" expanded="true" signature="1543:1564" placeholder="SELECT id, r..religia..." />
+            <marker date="1446667109206" expanded="true" signature="441:536" placeholder="CREATE TABLE..religia..." />
+            <marker date="1446667109206" expanded="true" signature="1377:1425" placeholder="INSERT INTO ..." />
+            <marker date="1446667109206" expanded="true" signature="1479:1498" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="1556:1577" placeholder="SELECT id, r..religia..." />
+            <marker date="1446667109206" expanded="true" signature="2020:2051" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="2020:2052" placeholder="DELETE FROM ..." />
+            <marker date="1446667109206" expanded="true" signature="3786:3818" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mielewczykl/jdbc/model/KlasztorManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6010101">
-          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.5580808">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1776#1777#0" expanded="true" />
-            <element signature="e#1802#1803#0" expanded="true" />
-            <marker date="1446602217895" expanded="true" signature="429:568" placeholder="CREATE TABLE..klasztor..." />
-            <marker date="1446602217895" expanded="true" signature="1411:1476" placeholder="INSERT INTO ..." />
-            <marker date="1446602217895" expanded="true" signature="1411:1478" placeholder="INSERT INTO ..." />
-            <marker date="1446602217895" expanded="true" signature="1530:1542" placeholder="DELETE FROM ..." />
-            <marker date="1446602217895" expanded="true" signature="1530:1550" placeholder="DELETE FROM ..." />
-            <marker date="1446602217895" expanded="true" signature="1608:1630" placeholder="SELECT id, n..Person..." />
+            <element signature="e#2516#2526#0" expanded="true" />
+            <marker date="1446667096285" expanded="true" signature="442:581" placeholder="CREATE TABLE..klasztor..." />
+            <marker date="1446667096285" expanded="true" signature="1424:1489" placeholder="INSERT INTO ..." />
+            <marker date="1446667096285" expanded="true" signature="1424:1491" placeholder="INSERT INTO ..." />
+            <marker date="1446667096285" expanded="true" signature="1543:1555" placeholder="DELETE FROM ..." />
+            <marker date="1446667096285" expanded="true" signature="1543:1563" placeholder="DELETE FROM ..." />
+            <marker date="1446667096285" expanded="true" signature="1621:1643" placeholder="SELECT id, n..Person..." />
           </folding>
         </state>
       </provider>

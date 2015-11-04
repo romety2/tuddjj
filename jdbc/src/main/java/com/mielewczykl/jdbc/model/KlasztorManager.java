@@ -11,7 +11,7 @@ public class KlasztorManager {
 
     private String polacz = "jdbc:sqlserver://eos.inf.ug.edu.pl;databaseName=lmielewczyk;trustServerCertificate=true";
     private String login = "lmielewczyk";
-    private String haslo = "224701";
+    private String haslo = "MartinZelekMaMalego";
 
     private String UtworzTabele = "CREATE TABLE klasztor(id INT IDENTITY(1,1) PRIMARY KEY, id_religia INT REFERENCES religia (id), nazwa  VARCHAR(100), kontakt  VARCHAR(100));";
 
@@ -96,4 +96,5 @@ public class KlasztorManager {
         ReligiaManager rm = new ReligiaManager();
         return rm.PobierzPierwszyID();
     }
+
 }

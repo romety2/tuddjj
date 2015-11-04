@@ -1,8 +1,5 @@
 package com.mielewczykl.jdbc.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Religia {
     private long id;
     private String religia;

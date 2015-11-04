@@ -11,7 +11,7 @@ public class ReligiaManager {
 
     private String polacz = "jdbc:sqlserver://eos.inf.ug.edu.pl;databaseName=lmielewczyk;trustServerCertificate=true";
     private String login = "lmielewczyk";
-    private String haslo = "224701";
+    private String haslo = "MartinZelekMaMalego";
 
     private String UtworzTabele = "CREATE TABLE religia(id INT IDENTITY(1,1) PRIMARY KEY, religia VARCHAR(30), opis VARCHAR(1000));";
 
@@ -49,7 +49,12 @@ public class ReligiaManager {
     }
 
     public void UsunWszystko() {
+        int i = 0;
         try {
+            KlasztorManager km = new KlasztorManager();
+            List<Klasztor>  klasztory = km.DajWszystkieDane();
+            for (i = 0; i<klasztory.size(); i++)
+                st.executeUpdate("DELETE FROM klasztor WHERE id = "+klasztory.get(i).getId()+";");
             usunWszystko.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -109,6 +114,14 @@ public class ReligiaManager {
             return rs.getLong("id");
         } catch (SQLException e) {
             return 0;
+        }
+    }
+
+    public void UsunZKlasztoru(Klasztor klasztor) {
+        try {
+            st.executeUpdate("DELETE FROM klasztor WHERE id = " + klasztor.getId() + ";");
+        }
+        catch (SQLException sqle) {
         }
     }
 }

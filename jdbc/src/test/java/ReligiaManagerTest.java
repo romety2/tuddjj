@@ -22,6 +22,7 @@ public class ReligiaManagerTest {
 
         Religia rel = new Religia(religia, opis);
 
+
         religiaManager.UsunWszystko();
         assertEquals(1, religiaManager.DodajWartosc(rel));
 
