@@ -2,6 +2,8 @@ import java.util.List;
 import org.junit.Test;
 import com.mielewczykl.jdbc.model.Klasztor;
 import com.mielewczykl.jdbc.model.KlasztorManager;
+import com.mielewczykl.jdbc.model.Religia;
+import com.mielewczykl.jdbc.model.ReligiaManager;
 import static org.junit.Assert.*;
 
 
@@ -22,8 +24,8 @@ public class KlasztorManagerTest {
     public void sprawdzDodawanie()
     {
 
-        long idrel = klasztorManager.PobierzPierwszyIDZReligii();
-        Klasztor klasztor = new Klasztor(idrel, nazwa, kontakt);
+        ReligiaManager rm = new ReligiaManager();
+        Klasztor klasztor = new Klasztor(rm.DajPierwszaReligie(), nazwa, kontakt);
 
         klasztorManager.UsunWszystko();
         assertEquals(1, klasztorManager.DodajWartosc(klasztor));

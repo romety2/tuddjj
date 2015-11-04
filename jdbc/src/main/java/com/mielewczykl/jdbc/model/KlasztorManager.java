@@ -11,7 +11,7 @@ public class KlasztorManager {
 
     private String polacz = "jdbc:sqlserver://eos.inf.ug.edu.pl;databaseName=lmielewczyk;trustServerCertificate=true";
     private String login = "lmielewczyk";
-    private String haslo = "MartinZelekMaMalego";
+    private String haslo = "224701";
 
     private String UtworzTabele = "CREATE TABLE klasztor(id INT IDENTITY(1,1) PRIMARY KEY, id_religia INT REFERENCES religia (id), nazwa  VARCHAR(100), kontakt  VARCHAR(100));";
 
@@ -80,7 +80,7 @@ public class KlasztorManager {
             while (rs.next()) {
                 Klasztor k = new Klasztor();
                 k.setId(rs.getInt("id"));
-                k.setReligia(rm.DajDaneZID(rs.getInt("id_religia")));
+                k.setReligia(rm.DajPierwszaReligie());
                 k.setNazwa(rs.getString("nazwa"));
                 k.setKontakt(rs.getString("kontakt"));
                 klasztory.add(k);
@@ -90,11 +90,6 @@ public class KlasztorManager {
             e.printStackTrace();
         }
         return klasztory;
-    }
-
-    public long PobierzPierwszyIDZReligii() {
-        ReligiaManager rm = new ReligiaManager();
-        return rm.PobierzPierwszyID();
     }
 
 }

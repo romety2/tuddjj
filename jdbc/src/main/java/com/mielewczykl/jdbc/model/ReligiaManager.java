@@ -11,7 +11,7 @@ public class ReligiaManager {
 
     private String polacz = "jdbc:sqlserver://eos.inf.ug.edu.pl;databaseName=lmielewczyk;trustServerCertificate=true";
     private String login = "lmielewczyk";
-    private String haslo = "MartinZelekMaMalego";
+    private String haslo = "224701";
 
     private String UtworzTabele = "CREATE TABLE religia(id INT IDENTITY(1,1) PRIMARY KEY, religia VARCHAR(30), opis VARCHAR(1000));";
 
@@ -54,7 +54,7 @@ public class ReligiaManager {
             KlasztorManager km = new KlasztorManager();
             List<Klasztor>  klasztory = km.DajWszystkieDane();
             for (i = 0; i<klasztory.size(); i++)
-                st.executeUpdate("DELETE FROM klasztor WHERE id = "+klasztory.get(i).getId()+";");
+                UsunZKlasztoru(klasztory.get(i));
             usunWszystko.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -95,11 +95,11 @@ public class ReligiaManager {
         return religie;
     }
 
-    public Religia DajDaneZID(long id) {
+    public Religia DajObiektReligia(Klasztor klasztor) {
         List<Religia> religie = DajWszystkieDane();
         int i = 0;
         int ile = religie.size();
-        while (religie.get(i).getId() != id && i<ile)
+        while (religie.get(i).getId() != klasztor.getId() && i<ile)
             i++;
         if (i != ile)
             return religie.get(i);
@@ -107,14 +107,12 @@ public class ReligiaManager {
             return null;
     }
 
-    public long PobierzPierwszyID() {
-        try {
-            ResultSet rs = wyswietlWszystko.executeQuery();
-            rs.next();
-            return rs.getLong("id");
-        } catch (SQLException e) {
-            return 0;
-        }
+    public Religia DajPierwszaReligie() {
+            List<Religia> religie = DajWszystkieDane();
+            if(religie.size() != 0)
+                return religie.get(0);
+            else
+                return null;
     }
 
     public void UsunZKlasztoru(Klasztor klasztor) {
