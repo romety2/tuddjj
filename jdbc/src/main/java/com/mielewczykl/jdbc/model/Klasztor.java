@@ -9,7 +9,9 @@ public class Klasztor {
 	public Klasztor() {
 	}
 
-	public Klasztor(String nazwa, String kontakt) {
+	public Klasztor(long idrel, String nazwa, String kontakt) {
+		ReligiaManager rm = new ReligiaManager();
+		this.religia = rm.DajDaneZID(idrel);
 		this.nazwa = nazwa;
 		this.kontakt = kontakt;
 	}

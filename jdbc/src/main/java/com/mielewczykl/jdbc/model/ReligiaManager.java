@@ -37,8 +37,8 @@ public class ReligiaManager {
             if (!utworzono)
                 st.executeUpdate(UtworzTabele);
             dodajWartosc = con.prepareStatement("INSERT INTO religia(religia, opis) VALUES (?, ?);");
-            usunWszystko = con.prepareStatement("DELETE FROM Religia;");
-            wyswietlWszystko = con.prepareStatement("SELECT id, religia, opis FROM Religia;");
+            usunWszystko = con.prepareStatement("DELETE FROM religia;");
+            wyswietlWszystko = con.prepareStatement("SELECT * FROM religia;");
         } catch (SQLException sqle) {
         } catch (ClassNotFoundException cnfe) {
         }
@@ -57,17 +57,17 @@ public class ReligiaManager {
     }
 
     public int DodajWartosc(Religia religia) {
-        int count = 0;
+        int ile = 0;
         try {
             dodajWartosc.setString(1, religia.getReligia());
             dodajWartosc.setString(2, religia.getOpis());
 
-            count = dodajWartosc.executeUpdate();
+            ile = dodajWartosc.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return count;
+        return ile;
     }
 
     public List<Religia> DajWszystkieDane() {
@@ -88,5 +88,27 @@ public class ReligiaManager {
             e.printStackTrace();
         }
         return religie;
+    }
+
+    public Religia DajDaneZID(long id) {
+        List<Religia> religie = DajWszystkieDane();
+        int i = 0;
+        int ile = religie.size();
+        while (religie.get(i).getId() != id && i<ile)
+            i++;
+        if (i != ile)
+            return religie.get(i);
+        else
+            return null;
+    }
+
+    public long PobierzPierwszyID() {
+        try {
+            ResultSet rs = wyswietlWszystko.executeQuery();
+            rs.next();
+            return rs.getLong("id");
+        } catch (SQLException e) {
+            return 0;
+        }
     }
 }

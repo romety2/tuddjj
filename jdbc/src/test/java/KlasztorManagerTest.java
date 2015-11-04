@@ -2,8 +2,6 @@ import java.util.List;
 import org.junit.Test;
 import com.mielewczykl.jdbc.model.Klasztor;
 import com.mielewczykl.jdbc.model.KlasztorManager;
-import com.mielewczykl.jdbc.model.Religia;
-import com.mielewczykl.jdbc.model.ReligiaManager;
 import static org.junit.Assert.*;
 
 
@@ -15,23 +13,27 @@ public class KlasztorManagerTest {
     private final static String kontakt = "string";
 
     @Test
-    public void checkConnection(){
+    public void sprawdzPolaczenie()
+    {
         assertNotNull(klasztorManager.getConnection());
     }
 
     @Test
-    public void checkAdding(){
+    public void sprawdzDodawanie()
+    {
 
-        Klasztor klasztor = new Klasztor(nazwa, kontakt);
+        long idrel = klasztorManager.PobierzPierwszyIDZReligii();
+        Klasztor klasztor = new Klasztor(idrel, nazwa, kontakt);
 
         klasztorManager.UsunWszystko();
         assertEquals(1, klasztorManager.DodajWartosc(klasztor));
 
         List<Klasztor> klasztory = klasztorManager.DajWszystkieDane();
-        Klasztor klasztorRetrieved = klasztory.get(0);
+        Klasztor pierwszyKlasztor = klasztory.get(0);
 
-        assertEquals(nazwa, klasztorRetrieved.getNazwa());
-        assertEquals(kontakt, klasztorRetrieved.getKontakt());
+
+        assertEquals(nazwa, pierwszyKlasztor.getNazwa());
+        assertEquals(kontakt, pierwszyKlasztor.getKontakt());
 
     }
 }

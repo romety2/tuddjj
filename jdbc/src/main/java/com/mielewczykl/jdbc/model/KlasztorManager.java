@@ -37,8 +37,8 @@ public class KlasztorManager {
             if (!utworzono)
                 st.executeUpdate(UtworzTabele);
             dodajWartosc = con.prepareStatement("INSERT INTO klasztor(id_religia, nazwa, kontakt) VALUES (?, ?, ?);");
-            usunWszystko = con.prepareStatement("DELETE FROM Klasztor;");
-            wyswietlWszystko = con.prepareStatement("SELECT id, id_religia, nazwa, kontakt FROM Klasztor;");
+            usunWszystko = con.prepareStatement("DELETE FROM klasztor;");
+            wyswietlWszystko = con.prepareStatement("SELECT * FROM klasztor;");
         } catch (SQLException sqle) {
         } catch (ClassNotFoundException cnfe) {
         }
@@ -57,18 +57,18 @@ public class KlasztorManager {
     }
 
     public int DodajWartosc(Klasztor klasztor) {
-        int count = 0;
+        int ile = 0;
         try {
-            //dodajWartosc.setInt(1, klasztor.getReligia()); -- relacja
+            dodajWartosc.setLong(1, klasztor.getReligia().getId());
             dodajWartosc.setString(2, klasztor.getNazwa());
             dodajWartosc.setString(3, klasztor.getKontakt());
 
-            count = dodajWartosc.executeUpdate();
+            ile = dodajWartosc.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return count;
+        return ile;
     }
 
     public List<Klasztor> DajWszystkieDane() {
@@ -76,11 +76,11 @@ public class KlasztorManager {
 
         try {
             ResultSet rs = wyswietlWszystko.executeQuery();
-
+            ReligiaManager rm = new ReligiaManager();
             while (rs.next()) {
                 Klasztor k = new Klasztor();
                 k.setId(rs.getInt("id"));
-                //k.setReligia(rs.getInt("id_religia")); -relacja
+                k.setReligia(rm.DajDaneZID(rs.getInt("id_religia")));
                 k.setNazwa(rs.getString("nazwa"));
                 k.setKontakt(rs.getString("kontakt"));
                 klasztory.add(k);
@@ -90,5 +90,10 @@ public class KlasztorManager {
             e.printStackTrace();
         }
         return klasztory;
+    }
+
+    public long PobierzPierwszyIDZReligii() {
+        ReligiaManager rm = new ReligiaManager();
+        return rm.PobierzPierwszyID();
     }
 }
