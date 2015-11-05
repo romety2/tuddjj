@@ -80,13 +80,12 @@ public class ReligiaManager {
     }
 
     public void Edytuj(Religia rel, String religia, String opis) {
-        long ile = rel.getId();
         try {
             PSedytuj.setString(1, religia);
             PSedytuj.setString(2, opis);
             PSedytuj.setLong(3, rel.getId());
 
-            ile = PSedytuj.executeUpdate();
+            PSedytuj.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -142,6 +141,16 @@ public class ReligiaManager {
                 return religie.get(id);
             else
                 return null;
+    }
+
+    public List<Klasztor> pobierzKlasztory(Religia religia) {
+        KlasztorManager km = new KlasztorManager();
+        List<Klasztor> klasztoryWszystkie = km.DajWszystkieDane();
+        List<Klasztor> klasztoryWybrane = new ArrayList<Klasztor>();
+        for (int i = 0; i < klasztoryWszystkie.size(); i++)
+            if(klasztoryWszystkie.get(i).getReligia().getId() == religia.getId())
+                klasztoryWybrane.add(klasztoryWszystkie.get(i));
+        return klasztoryWybrane;
     }
 
 }

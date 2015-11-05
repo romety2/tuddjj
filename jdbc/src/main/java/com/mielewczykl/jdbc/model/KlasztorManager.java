@@ -83,6 +83,8 @@ public class KlasztorManager {
             PSedytuj.setString(3, kontakt);
             PSedytuj.setLong(4, klasztor.getId());
 
+            PSedytuj.executeUpdate();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -105,11 +107,17 @@ public class KlasztorManager {
 
         try {
             ResultSet rs = PSwyswietlWszystko.executeQuery();
+            int id, i;
             ReligiaManager rm = new ReligiaManager();
+            List<Religia> religie = rm.DajWszystkieDane();
             while (rs.next()) {
                 Klasztor k = new Klasztor();
                 k.setId(rs.getInt("id"));
-                k.setReligia(rm.DajReligie(0));
+                id = rs.getInt("id_religia");
+                i = 0;
+                while(religie.get(i).getId() != id )
+                    i++;
+                k.setReligia(religie.get(i));
                 k.setNazwa(rs.getString("nazwa"));
                 k.setKontakt(rs.getString("kontakt"));
                 klasztory.add(k);
@@ -119,6 +127,14 @@ public class KlasztorManager {
             e.printStackTrace();
         }
         return klasztory;
+    }
+
+    public Klasztor DajKlasztor(int id) {
+        List<Klasztor> klasztory = DajWszystkieDane();
+        if(klasztory.size() != id)
+            return klasztory.get(id);
+        else
+            return null;
     }
 
 }
