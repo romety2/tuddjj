@@ -34,6 +34,30 @@ public class ReligiaManagerTest {
     }
 
     @Test
+    public void sprawdzEdycje(){
+
+        Religia rel = new Religia(religia, opis);
+
+        String religia2 = "string2";
+        String opis2 = "string2";
+
+        religiaManager.UsunWszystko();
+
+        assertEquals(1, religiaManager.Dodaj(rel));
+
+        rel = religiaManager.DajReligie(0);
+
+        religiaManager.Edytuj(rel, religia2, opis2);
+
+        List<Religia> religie = religiaManager.DajWszystkieDane();
+        Religia edytowanaReligia = religie.get(0);
+
+        assertEquals(religia2, edytowanaReligia.getReligia());
+        assertEquals(opis2, edytowanaReligia.getOpis());
+
+    }
+
+    @Test
     public void sprawdzUsuwanie(){
 
         religiaManager.UsunWszystko();

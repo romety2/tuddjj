@@ -16,6 +16,7 @@ public class KlasztorManager {
     private String UtworzTabele = "CREATE TABLE klasztor(id INT IDENTITY(1,1) PRIMARY KEY, id_religia INT REFERENCES religia (id), nazwa  VARCHAR(100), kontakt  VARCHAR(100));";
 
     private PreparedStatement PSdodaj;
+    private PreparedStatement PSedytuj;
     private PreparedStatement PSusun;
     private PreparedStatement PSusunWszystko;
     private PreparedStatement PSwyswietlWszystko;
@@ -38,6 +39,7 @@ public class KlasztorManager {
             if (!utworzono)
                 st.executeUpdate(UtworzTabele);
             PSdodaj = con.prepareStatement("INSERT INTO klasztor(id_religia, nazwa, kontakt) VALUES (?, ?, ?);");
+            PSedytuj = con.prepareStatement("UPDATE klasztor SET id_religia = ?, nazwa = ?, kontakt = ? WHERE id = ?;");
             PSusun = con.prepareStatement("DELETE FROM klasztor WHERE id = ? ;");
             PSusunWszystko = con.prepareStatement("DELETE FROM klasztor;");
             PSwyswietlWszystko = con.prepareStatement("SELECT * FROM klasztor;");
@@ -73,10 +75,23 @@ public class KlasztorManager {
         return ile;
     }
 
+    public void Edytuj(Klasztor klasztor, Religia religia, String nazwa, String kontakt) {
+        try {
+
+            PSedytuj.setLong(1, religia.getId());
+            PSedytuj.setString(2, nazwa);
+            PSedytuj.setString(3, kontakt);
+            PSedytuj.setLong(4, klasztor.getId());
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public int Usun(Klasztor klasztor) {
         int ile = 0;
         try {
-            PSusun.setString(1, Long.toString(klasztor.getId()));
+            PSusun.setLong(1, klasztor.getId());
 
             ile = PSusun.executeUpdate();
         }
@@ -94,7 +109,7 @@ public class KlasztorManager {
             while (rs.next()) {
                 Klasztor k = new Klasztor();
                 k.setId(rs.getInt("id"));
-                k.setReligia(rm.DajPierwszaReligie());
+                k.setReligia(rm.DajReligie(0));
                 k.setNazwa(rs.getString("nazwa"));
                 k.setKontakt(rs.getString("kontakt"));
                 klasztory.add(k);

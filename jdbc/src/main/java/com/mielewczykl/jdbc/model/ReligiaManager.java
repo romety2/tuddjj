@@ -16,6 +16,7 @@ public class ReligiaManager {
     private String UtworzTabele = "CREATE TABLE religia(id INT IDENTITY(1,1) PRIMARY KEY, religia VARCHAR(30), opis VARCHAR(1000));";
 
     private PreparedStatement PSdodaj;
+    private PreparedStatement PSedytuj;
     private PreparedStatement PSusun;
     private PreparedStatement PSusunWszystko;
     private PreparedStatement PSwyswietlWszystko;
@@ -38,6 +39,7 @@ public class ReligiaManager {
             if (!utworzono)
                 st.executeUpdate(UtworzTabele);
             PSdodaj = con.prepareStatement("INSERT INTO religia(religia, opis) VALUES (?, ?);");
+            PSedytuj = con.prepareStatement("UPDATE religia SET religia = ?, opis = ?  WHERE id = ?;");
             PSusun = con.prepareStatement("DELETE FROM religia WHERE id = ? ;");
             PSusunWszystko = con.prepareStatement("DELETE FROM religia;");
             PSwyswietlWszystko = con.prepareStatement("SELECT * FROM religia;");
@@ -77,10 +79,24 @@ public class ReligiaManager {
         return ile;
     }
 
+    public void Edytuj(Religia rel, String religia, String opis) {
+        long ile = rel.getId();
+        try {
+            PSedytuj.setString(1, religia);
+            PSedytuj.setString(2, opis);
+            PSedytuj.setLong(3, rel.getId());
+
+            ile = PSedytuj.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public int Usun(Religia religia) {
         int ile = 0;
         try {
-            PSusun.setString(1, Long.toString(religia.getId()));
+            PSusun.setLong(1, religia.getId());
             ile = PSusun.executeUpdate();
         }
         catch (SQLException sqle) {
@@ -120,10 +136,10 @@ public class ReligiaManager {
             return null;
     }*/
 
-    public Religia DajPierwszaReligie() {
+    public Religia DajReligie(int id) {
             List<Religia> religie = DajWszystkieDane();
-            if(religie.size() != 0)
-                return religie.get(0);
+            if(religie.size() != id)
+                return religie.get(id);
             else
                 return null;
     }
