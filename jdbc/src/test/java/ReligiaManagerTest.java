@@ -22,15 +22,27 @@ public class ReligiaManagerTest {
 
         Religia rel = new Religia(religia, opis);
 
-
         religiaManager.UsunWszystko();
-        assertEquals(1, religiaManager.DodajWartosc(rel));
+        assertEquals(1, religiaManager.Dodaj(rel));
 
         List<Religia> religie = religiaManager.DajWszystkieDane();
-        Religia pierwszaReligia = religie.get(0);
+        Religia dodanaReligia = religie.get(0);
 
-        assertEquals(religia, pierwszaReligia.getReligia());
-        assertEquals(opis, pierwszaReligia.getOpis());
+        assertEquals(religia, dodanaReligia.getReligia());
+        assertEquals(opis, dodanaReligia.getOpis());
+
+    }
+
+    @Test
+    public void sprawdzUsuwanie(){
+
+        religiaManager.UsunWszystko();
+
+        Religia rel = new Religia(religia, opis);
+
+        religiaManager.UsunWszystko();
+        assertEquals(1, religiaManager.Dodaj(rel));
+        assertEquals(0, religiaManager.Usun(rel));;
 
     }
 }

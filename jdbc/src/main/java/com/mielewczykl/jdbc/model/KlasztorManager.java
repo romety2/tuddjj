@@ -15,9 +15,10 @@ public class KlasztorManager {
 
     private String UtworzTabele = "CREATE TABLE klasztor(id INT IDENTITY(1,1) PRIMARY KEY, id_religia INT REFERENCES religia (id), nazwa  VARCHAR(100), kontakt  VARCHAR(100));";
 
-    private PreparedStatement dodajWartosc;
-    private PreparedStatement usunWszystko;
-    private PreparedStatement wyswietlWszystko;
+    private PreparedStatement PSdodaj;
+    private PreparedStatement PSusun;
+    private PreparedStatement PSusunWszystko;
+    private PreparedStatement PSwyswietlWszystko;
 
     public KlasztorManager()
     {
@@ -36,9 +37,10 @@ public class KlasztorManager {
             }
             if (!utworzono)
                 st.executeUpdate(UtworzTabele);
-            dodajWartosc = con.prepareStatement("INSERT INTO klasztor(id_religia, nazwa, kontakt) VALUES (?, ?, ?);");
-            usunWszystko = con.prepareStatement("DELETE FROM klasztor;");
-            wyswietlWszystko = con.prepareStatement("SELECT * FROM klasztor;");
+            PSdodaj = con.prepareStatement("INSERT INTO klasztor(id_religia, nazwa, kontakt) VALUES (?, ?, ?);");
+            PSusun = con.prepareStatement("DELETE FROM klasztor WHERE id = ? ;");
+            PSusunWszystko = con.prepareStatement("DELETE FROM klasztor;");
+            PSwyswietlWszystko = con.prepareStatement("SELECT * FROM klasztor;");
         } catch (SQLException sqle) {
         } catch (ClassNotFoundException cnfe) {
         }
@@ -50,23 +52,35 @@ public class KlasztorManager {
 
     public void UsunWszystko() {
         try {
-            usunWszystko.executeUpdate();
+            PSusunWszystko.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public int DodajWartosc(Klasztor klasztor) {
+    public int Dodaj(Klasztor klasztor) {
         int ile = 0;
         try {
-            dodajWartosc.setLong(1, klasztor.getReligia().getId());
-            dodajWartosc.setString(2, klasztor.getNazwa());
-            dodajWartosc.setString(3, klasztor.getKontakt());
+            PSdodaj.setLong(1, klasztor.getReligia().getId());
+            PSdodaj.setString(2, klasztor.getNazwa());
+            PSdodaj.setString(3, klasztor.getKontakt());
 
-            ile = dodajWartosc.executeUpdate();
+            ile = PSdodaj.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+        return ile;
+    }
+
+    public int Usun(Klasztor klasztor) {
+        int ile = 0;
+        try {
+            PSusun.setString(1, Long.toString(klasztor.getId()));
+
+            ile = PSusun.executeUpdate();
+        }
+        catch (SQLException sqle) {
         }
         return ile;
     }
@@ -75,7 +89,7 @@ public class KlasztorManager {
         List<Klasztor> klasztory = new ArrayList<Klasztor>();
 
         try {
-            ResultSet rs = wyswietlWszystko.executeQuery();
+            ResultSet rs = PSwyswietlWszystko.executeQuery();
             ReligiaManager rm = new ReligiaManager();
             while (rs.next()) {
                 Klasztor k = new Klasztor();
