@@ -177,4 +177,31 @@ public class KlasztorManagerTest {
         assertEquals(0, klasztory.size());
 
     }
+
+    @Test
+    public void sprawdzPrzypiszReligie(){
+
+        ReligiaManager rm = new ReligiaManager();
+        Religia rel = rm.DajReligie(0);
+
+        if (rel == null)
+        {
+            rel = new Religia("string", "string");
+            assertEquals(1, rm.Dodaj(rel));
+            rel = rm.DajReligie(0);
+        }
+
+        Klasztor klasztor = new Klasztor(rel, nazwa, kontakt);
+
+        klasztorManager.UsunWszystko();
+
+        klasztorManager.Dodaj(klasztor);
+
+        List<Klasztor> klasztory = klasztorManager.DajWszystkieDane();
+
+        klasztor = klasztory.get(0);
+
+        assertEquals(klasztor.getReligia().getId(), klasztorManager.PrzypiszReligie(klasztor).getId());
+
+    }
 }

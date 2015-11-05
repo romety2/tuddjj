@@ -91,7 +91,7 @@ public class ReligiaManagerTest {
     }
 
     @Test
-    public void sprawdzUsunwszystko(){
+    public void sprawdzUsunWszystko(){
 
         Religia rel = new Religia(religia, opis);
 
@@ -163,6 +163,6 @@ public class ReligiaManagerTest {
             assertEquals(rel.getOpis(), klasztory.get(i).getReligia().getOpis());
         }
 
-
     }
+
 }

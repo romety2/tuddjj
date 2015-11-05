@@ -94,7 +94,6 @@ public class KlasztorManager {
         int ile = 0;
         try {
             PSusun.setLong(1, klasztor.getId());
-
             ile = PSusun.executeUpdate();
         }
         catch (SQLException sqle) {
@@ -127,6 +126,18 @@ public class KlasztorManager {
             e.printStackTrace();
         }
         return klasztory;
+    }
+
+    public Religia PrzypiszReligie(Klasztor klasztor) {
+        int i = 0;
+        ReligiaManager rm = new ReligiaManager();
+        List<Religia> religie = rm.DajWszystkieDane();
+        while (i != religie.size() && religie.get(i).getId() != klasztor.getReligia().getId())
+            i++;
+        if(i != religie.size())
+            return religie.get(i);
+        else
+            return null;
     }
 
     public Klasztor DajKlasztor(int id) {

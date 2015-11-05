@@ -123,26 +123,6 @@ public class ReligiaManager {
         return religie;
     }
 
-    /*public Religia DajObiektReligia(Klasztor klasztor) {
-        List<Religia> religie = DajWszystkieDane();
-        int i = 0;
-        int ile = religie.size();
-        while (religie.get(i).getId() != klasztor.getId() && i<ile)
-            i++;
-        if (i != ile)
-            return religie.get(i);
-        else
-            return null;
-    }*/
-
-    public Religia DajReligie(int id) {
-            List<Religia> religie = DajWszystkieDane();
-            if(religie.size() != id)
-                return religie.get(id);
-            else
-                return null;
-    }
-
     public List<Klasztor> pobierzKlasztory(Religia religia) {
         KlasztorManager km = new KlasztorManager();
         List<Klasztor> klasztoryWszystkie = km.DajWszystkieDane();
@@ -151,6 +131,14 @@ public class ReligiaManager {
             if(klasztoryWszystkie.get(i).getReligia().getId() == religia.getId())
                 klasztoryWybrane.add(klasztoryWszystkie.get(i));
         return klasztoryWybrane;
+    }
+
+    public Religia DajReligie(int id) {
+            List<Religia> religie = DajWszystkieDane();
+            if(religie.size() != id)
+                return religie.get(id);
+            else
+                return null;
     }
 
 }
