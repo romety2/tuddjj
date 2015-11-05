@@ -48,7 +48,7 @@ public class ReligiaManager {
         }
     }
 
-    public Connection getConnection() {
+    public Connection Polaczenie() {
         return con;
     }
 

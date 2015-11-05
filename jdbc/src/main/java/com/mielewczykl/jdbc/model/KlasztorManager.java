@@ -48,7 +48,7 @@ public class KlasztorManager {
         }
     }
 
-    public Connection getConnection() {
+    public Connection Polaczenie() {
         return con;
     }
 

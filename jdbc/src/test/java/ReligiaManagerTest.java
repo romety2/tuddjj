@@ -16,11 +16,11 @@ public class ReligiaManagerTest {
     @Test
     public void sprawdzPolaczenie()
     {
-        assertNotNull(religiaManager.getConnection());
+        assertNotNull(religiaManager.Polaczenie());
     }
 
     @Test
-    public void sprawdzDodawanie(){
+    public void sprawdzDodaj(){
 
         Religia rel = new Religia(religia, opis);
 
@@ -36,7 +36,7 @@ public class ReligiaManagerTest {
     }
 
     @Test
-    public void sprawdzEdycje(){
+    public void sprawdzEdycja(){
 
         Religia rel = new Religia(religia, opis);
 
@@ -60,14 +60,33 @@ public class ReligiaManagerTest {
     }
 
     @Test
-    public void sprawdzUsuwanie(){
+    public void sprawdzUsun(){
 
         Religia rel = new Religia(religia, opis);
 
         religiaManager.UsunWszystko();
 
         assertEquals(1, religiaManager.Dodaj(rel));
-        assertEquals(0, religiaManager.Usun(rel));;
+        assertEquals(0, religiaManager.Usun(rel));
+
+    }
+
+    @Test
+    public void sprawdzDajWszystkieDane(){
+
+        Religia rel = new Religia(religia, opis);
+
+        religiaManager.UsunWszystko();
+
+        religiaManager.Dodaj(rel);
+        religiaManager.Dodaj(rel);
+        religiaManager.Dodaj(rel);
+        religiaManager.Dodaj(rel);
+        religiaManager.Dodaj(rel);
+
+        List<Religia> religie = religiaManager.DajWszystkieDane();
+
+        assertEquals(5, religie.size());
 
     }
 
@@ -106,12 +125,18 @@ public class ReligiaManagerTest {
         assertEquals(1, km.Dodaj(klasztor4));
 
         List<Klasztor> klasztory = religiaManager.pobierzKlasztory(rel);
-        for(int i = 0; i < klasztory.size(); i++)
+        for(int i = 0; i < klasztory.size(); i++) {
             assertEquals(rel.getId(), klasztory.get(i).getReligia().getId());
+            assertEquals(rel.getReligia(), klasztory.get(i).getReligia().getReligia());
+            assertEquals(rel.getOpis(), klasztory.get(i).getReligia().getOpis());
+        }
 
         List<Klasztor> klasztory2 = religiaManager.pobierzKlasztory(rel2);
-        for(int i = 0; i < klasztory2.size(); i++)
+        for(int i = 0; i < klasztory2.size(); i++) {
             assertEquals(rel2.getId(), klasztory2.get(i).getReligia().getId());
+            assertEquals(rel.getReligia(), klasztory.get(i).getReligia().getReligia());
+            assertEquals(rel.getOpis(), klasztory.get(i).getReligia().getOpis());
+        }
 
 
     }
