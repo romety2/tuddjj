@@ -91,6 +91,31 @@ public class ReligiaManagerTest {
     }
 
     @Test
+    public void sprawdzUsunwszystko(){
+
+        Religia rel = new Religia(religia, opis);
+
+        religiaManager.UsunWszystko();
+
+        religiaManager.Dodaj(rel);
+        religiaManager.Dodaj(rel);
+        religiaManager.Dodaj(rel);
+        religiaManager.Dodaj(rel);
+        religiaManager.Dodaj(rel);
+
+        List<Religia> religie = religiaManager.DajWszystkieDane();
+
+        assertEquals(5, religie.size());
+
+        religiaManager.UsunWszystko();
+
+        religie = religiaManager.DajWszystkieDane();
+
+        assertEquals(0, religie.size());
+
+    }
+
+    @Test
     public void sprawdzPobranieKlasztorow(){
 
         String religia2 = "string2";

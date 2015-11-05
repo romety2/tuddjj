@@ -115,7 +115,7 @@ public class KlasztorManagerTest {
     }
 
     @Test
-    public void sprawdzDajWszystkieDane(){
+         public void sprawdzDajWszystkieDane(){
 
         ReligiaManager rm = new ReligiaManager();
         Religia rel = rm.DajReligie(0);
@@ -140,6 +140,41 @@ public class KlasztorManagerTest {
         List<Klasztor> klasztory = klasztorManager.DajWszystkieDane();
 
         assertEquals(5, klasztory.size());
+
+    }
+
+    @Test
+    public void sprawdzUsunWszystko(){
+
+        ReligiaManager rm = new ReligiaManager();
+        Religia rel = rm.DajReligie(0);
+
+        if (rel == null)
+        {
+            rel = new Religia("string", "string");
+            assertEquals(1, rm.Dodaj(rel));
+            rel = rm.DajReligie(0);
+        }
+
+        Klasztor klasztor = new Klasztor(rel, nazwa, kontakt);
+
+        klasztorManager.UsunWszystko();
+
+        klasztorManager.Dodaj(klasztor);
+        klasztorManager.Dodaj(klasztor);
+        klasztorManager.Dodaj(klasztor);
+        klasztorManager.Dodaj(klasztor);
+        klasztorManager.Dodaj(klasztor);
+
+        List<Klasztor> klasztory = klasztorManager.DajWszystkieDane();
+
+        assertEquals(5, klasztory.size());
+
+        klasztorManager.UsunWszystko();
+
+        klasztory = klasztorManager.DajWszystkieDane();
+
+        assertEquals(0, klasztory.size());
 
     }
 }
