@@ -16,7 +16,7 @@ public class ReligiaManagerTest {
     @Test
     public void sprawdzPolaczenie()
     {
-        assertNotNull(religiaManager.Polaczenie());
+        assertNotNull(religiaManager.polaczenie());
     }
 
     @Test
@@ -24,10 +24,10 @@ public class ReligiaManagerTest {
 
         Religia rel = new Religia(religia, opis);
 
-        religiaManager.UsunWszystko();
-        assertEquals(1, religiaManager.Dodaj(rel));
+        religiaManager.usunWszystko();
+        assertEquals(1, religiaManager.dodaj(rel));
 
-        List<Religia> religie = religiaManager.DajWszystkieDane();
+        List<Religia> religie = religiaManager.dajWszystkieDane();
         Religia dodanaReligia = religie.get(0);
 
         assertEquals(religia, dodanaReligia.getReligia());
@@ -43,15 +43,15 @@ public class ReligiaManagerTest {
         String religia2 = "string2";
         String opis2 = "string2";
 
-        religiaManager.UsunWszystko();
+        religiaManager.usunWszystko();
 
-        assertEquals(1, religiaManager.Dodaj(rel));
+        assertEquals(1, religiaManager.dodaj(rel));
 
-        rel = religiaManager.DajReligie(0);
+        rel = religiaManager.dajReligie(0);
 
-        religiaManager.Edytuj(rel, religia2, opis2);
+        religiaManager.edytuj(rel, religia2, opis2);
 
-        List<Religia> religie = religiaManager.DajWszystkieDane();
+        List<Religia> religie = religiaManager.dajWszystkieDane();
         Religia edytowanaReligia = religie.get(0);
 
         assertEquals(religia2, edytowanaReligia.getReligia());
@@ -64,10 +64,10 @@ public class ReligiaManagerTest {
 
         Religia rel = new Religia(religia, opis);
 
-        religiaManager.UsunWszystko();
+        religiaManager.usunWszystko();
 
-        assertEquals(1, religiaManager.Dodaj(rel));
-        assertEquals(0, religiaManager.Usun(rel));
+        assertEquals(1, religiaManager.dodaj(rel));
+        assertEquals(0, religiaManager.usun(rel));
 
     }
 
@@ -76,15 +76,15 @@ public class ReligiaManagerTest {
 
         Religia rel = new Religia(religia, opis);
 
-        religiaManager.UsunWszystko();
+        religiaManager.usunWszystko();
 
-        religiaManager.Dodaj(rel);
-        religiaManager.Dodaj(rel);
-        religiaManager.Dodaj(rel);
-        religiaManager.Dodaj(rel);
-        religiaManager.Dodaj(rel);
+        religiaManager.dodaj(rel);
+        religiaManager.dodaj(rel);
+        religiaManager.dodaj(rel);
+        religiaManager.dodaj(rel);
+        religiaManager.dodaj(rel);
 
-        List<Religia> religie = religiaManager.DajWszystkieDane();
+        List<Religia> religie = religiaManager.dajWszystkieDane();
 
         assertEquals(5, religie.size());
 
@@ -95,21 +95,21 @@ public class ReligiaManagerTest {
 
         Religia rel = new Religia(religia, opis);
 
-        religiaManager.UsunWszystko();
+        religiaManager.usunWszystko();
 
-        religiaManager.Dodaj(rel);
-        religiaManager.Dodaj(rel);
-        religiaManager.Dodaj(rel);
-        religiaManager.Dodaj(rel);
-        religiaManager.Dodaj(rel);
+        religiaManager.dodaj(rel);
+        religiaManager.dodaj(rel);
+        religiaManager.dodaj(rel);
+        religiaManager.dodaj(rel);
+        religiaManager.dodaj(rel);
 
-        List<Religia> religie = religiaManager.DajWszystkieDane();
+        List<Religia> religie = religiaManager.dajWszystkieDane();
 
         assertEquals(5, religie.size());
 
-        religiaManager.UsunWszystko();
+        religiaManager.usunWszystko();
 
-        religie = religiaManager.DajWszystkieDane();
+        religie = religiaManager.dajWszystkieDane();
 
         assertEquals(0, religie.size());
 
@@ -132,22 +132,22 @@ public class ReligiaManagerTest {
         Religia rel = new Religia(religia, opis);
         Religia rel2 = new Religia(religia2, opis2);
 
-        religiaManager.UsunWszystko();
-        assertEquals(1, religiaManager.Dodaj(rel));
-        rel = religiaManager.DajReligie(0);
-        assertEquals(1, religiaManager.Dodaj(rel2));
-        rel2 = religiaManager.DajReligie(1);
+        religiaManager.usunWszystko();
+        assertEquals(1, religiaManager.dodaj(rel));
+        rel = religiaManager.dajReligie(0);
+        assertEquals(1, religiaManager.dodaj(rel2));
+        rel2 = religiaManager.dajReligie(1);
 
         KlasztorManager km = new KlasztorManager();
-        km.UsunWszystko();
+        km.usunWszystko();
         Klasztor klasztor1 = new Klasztor(rel, nazwa1, kontakt1);
-        assertEquals(1, km.Dodaj(klasztor1));
+        assertEquals(1, km.dodaj(klasztor1));
         Klasztor klasztor2 = new Klasztor(rel2, nazwa2, kontakt2);
-        assertEquals(1, km.Dodaj(klasztor2));
+        assertEquals(1, km.dodaj(klasztor2));
         Klasztor klasztor3 = new Klasztor(rel, nazwa3, kontakt3);
-        assertEquals(1, km.Dodaj(klasztor3));
+        assertEquals(1, km.dodaj(klasztor3));
         Klasztor klasztor4 = new Klasztor(rel2, nazwa4, kontakt4);
-        assertEquals(1, km.Dodaj(klasztor4));
+        assertEquals(1, km.dodaj(klasztor4));
 
         List<Klasztor> klasztory = religiaManager.pobierzKlasztory(rel);
         for(int i = 0; i < klasztory.size(); i++) {
@@ -182,30 +182,30 @@ public class ReligiaManagerTest {
         Religia rel = new Religia(religia, opis);
         Religia rel2 = new Religia(religia2, opis2);
 
-        religiaManager.UsunWszystko();
-        assertEquals(1, religiaManager.Dodaj(rel));
-        rel = religiaManager.DajReligie(0);
-        assertEquals(1, religiaManager.Dodaj(rel2));
-        rel2 = religiaManager.DajReligie(1);
+        religiaManager.usunWszystko();
+        assertEquals(1, religiaManager.dodaj(rel));
+        rel = religiaManager.dajReligie(0);
+        assertEquals(1, religiaManager.dodaj(rel2));
+        rel2 = religiaManager.dajReligie(1);
 
         KlasztorManager km = new KlasztorManager();
-        km.UsunWszystko();
+        km.usunWszystko();
         Klasztor klasztor1 = new Klasztor(rel, nazwa1, kontakt1);
-        assertEquals(1, km.Dodaj(klasztor1));
+        assertEquals(1, km.dodaj(klasztor1));
         Klasztor klasztor2 = new Klasztor(rel2, nazwa2, kontakt2);
-        assertEquals(1, km.Dodaj(klasztor2));
+        assertEquals(1, km.dodaj(klasztor2));
         Klasztor klasztor3 = new Klasztor(rel, nazwa3, kontakt3);
-        assertEquals(1, km.Dodaj(klasztor3));
+        assertEquals(1, km.dodaj(klasztor3));
         Klasztor klasztor4 = new Klasztor(rel2, nazwa4, kontakt4);
-        assertEquals(1, km.Dodaj(klasztor4));
+        assertEquals(1, km.dodaj(klasztor4));
 
-        List<Klasztor> klasztory1 = km.DajWszystkieDane();
+        List<Klasztor> klasztory1 = km.dajWszystkieDane();
 
         assertEquals(4, klasztory1.size());
 
-        religiaManager.UsunKlasztory(rel);
+        religiaManager.usunKlasztory(rel);
 
-        List<Klasztor> klasztory2 = km.DajWszystkieDane();
+        List<Klasztor> klasztory2 = km.dajWszystkieDane();
 
         assertEquals(2, klasztory2.size());
         for(int i = 0; i < klasztory2.size(); i++)

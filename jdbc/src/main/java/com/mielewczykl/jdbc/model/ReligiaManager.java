@@ -9,9 +9,7 @@ public class ReligiaManager {
     private Connection con;
     private Statement st;
 
-    private String polacz = "jdbc:sqlserver://eos.inf.ug.edu.pl;databaseName=lmielewczyk;trustServerCertificate=true";
-    private String login = "lmielewczyk";
-    private String haslo = "224701";
+    private String url = "jdbc:jtds:sqlserver://eos.inf.ug.edu.pl;" + "databaseName=lmielewczyk" + ";user=lmielewczyk" + ";password=224701";
 
     private String UtworzTabele = "CREATE TABLE religia(id INT IDENTITY(1,1) PRIMARY KEY, religia VARCHAR(30), opis VARCHAR(1000));";
 
@@ -24,8 +22,7 @@ public class ReligiaManager {
     public ReligiaManager()
     {
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            con = DriverManager.getConnection(polacz, login, haslo);
+            con = DriverManager.getConnection(url);
             st = con.createStatement();
             ResultSet rs = con.getMetaData().getTables(null, null, null, null);
             boolean utworzono = false;
@@ -44,28 +41,27 @@ public class ReligiaManager {
             PSusunWszystko = con.prepareStatement("DELETE FROM religia;");
             PSwyswietlWszystko = con.prepareStatement("SELECT * FROM religia;");
         } catch (SQLException sqle) {
-        } catch (ClassNotFoundException cnfe) {
         }
     }
 
-    public Connection Polaczenie() {
+    public Connection polaczenie() {
         return con;
     }
 
-    public void UsunWszystko() {
+    public void usunWszystko() {
         int i = 0;
         try {
             KlasztorManager km = new KlasztorManager();
-            List<Klasztor>  klasztory = km.DajWszystkieDane();
+            List<Klasztor>  klasztory = km.dajWszystkieDane();
             for (i = 0; i<klasztory.size(); i++)
-                km.Usun(klasztory.get(i));
+                km.usun(klasztory.get(i));
             PSusunWszystko.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public int Dodaj(Religia religia) {
+    public int dodaj(Religia religia) {
         int ile = 0;
         try {
             PSdodaj.setString(1, religia.getReligia());
@@ -79,7 +75,7 @@ public class ReligiaManager {
         return ile;
     }
 
-    public void Edytuj(Religia rel, String religia, String opis) {
+    public void edytuj(Religia rel, String religia, String opis) {
         try {
             PSedytuj.setString(1, religia);
             PSedytuj.setString(2, opis);
@@ -92,7 +88,7 @@ public class ReligiaManager {
         }
     }
 
-    public int Usun(Religia religia) {
+    public int usun(Religia religia) {
         int ile = 0;
         try {
             PSusun.setLong(1, religia.getId());
@@ -103,7 +99,7 @@ public class ReligiaManager {
         return ile;
     }
 
-    public List<Religia> DajWszystkieDane() {
+    public List<Religia> dajWszystkieDane() {
         List<Religia> religie = new ArrayList<Religia>();
 
         try {
@@ -125,7 +121,7 @@ public class ReligiaManager {
 
     public List<Klasztor> pobierzKlasztory(Religia religia) {
         KlasztorManager km = new KlasztorManager();
-        List<Klasztor> klasztoryWszystkie = km.DajWszystkieDane();
+        List<Klasztor> klasztoryWszystkie = km.dajWszystkieDane();
         List<Klasztor> klasztoryWybrane = new ArrayList<Klasztor>();
         for (int i = 0; i < klasztoryWszystkie.size(); i++)
             if(klasztoryWszystkie.get(i).getReligia().getId() == religia.getId())
@@ -133,11 +129,11 @@ public class ReligiaManager {
         return klasztoryWybrane;
     }
 
-    public void UsunKlasztory(Religia religia) {
+    public void usunKlasztory(Religia religia) {
         try{
             PreparedStatement PSusunKlasztor = con.prepareStatement("DELETE FROM klasztor WHERE id = ? ;");
             KlasztorManager km = new KlasztorManager();
-            List<Klasztor> klasztory = km.DajWszystkieDane();
+            List<Klasztor> klasztory = km.dajWszystkieDane();
             for (int i = 0; i < klasztory.size(); i++)
                 if(klasztory.get(i).getReligia().getId() == religia.getId())
                 {
@@ -148,8 +144,8 @@ public class ReligiaManager {
         }
     }
 
-    public Religia DajReligie(int id) {
-            List<Religia> religie = DajWszystkieDane();
+    public Religia dajReligie(int id) {
+            List<Religia> religie = dajWszystkieDane();
             if(religie.size() != id)
                 return religie.get(id);
             else

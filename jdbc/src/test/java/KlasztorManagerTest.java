@@ -17,29 +17,29 @@ public class KlasztorManagerTest {
     @Test
     public void sprawdzPolaczenie()
     {
-        assertNotNull(klasztorManager.Polaczenie());
+        assertNotNull(klasztorManager.polaczenie());
     }
 
     @Test
     public void sprawdzDodaj()
     {
         ReligiaManager rm = new ReligiaManager();
-        Religia rel = rm.DajReligie(0);
+        Religia rel = rm.dajReligie(0);
 
         if (rel == null)
         {
             rel = new Religia("string", "string");
-            assertEquals(1, rm.Dodaj(rel));
-            rel = rm.DajReligie(0);
+            assertEquals(1, rm.dodaj(rel));
+            rel = rm.dajReligie(0);
         }
 
         Klasztor klasztor = new Klasztor(rel, nazwa, kontakt);
 
-        klasztorManager.UsunWszystko();
+        klasztorManager.usunWszystko();
 
-        assertEquals(1, klasztorManager.Dodaj(klasztor));
+        assertEquals(1, klasztorManager.dodaj(klasztor));
 
-        List<Klasztor> klasztory = klasztorManager.DajWszystkieDane();
+        List<Klasztor> klasztory = klasztorManager.dajWszystkieDane();
         Klasztor dodanyKlasztor = klasztory.get(0);
 
         assertEquals(rel.getId(), dodanyKlasztor.getReligia().getId());
@@ -57,31 +57,31 @@ public class KlasztorManagerTest {
         String kontakt2 = "string2";
 
         ReligiaManager rm = new ReligiaManager();
-        Religia rel = rm.DajReligie(0);
+        Religia rel = rm.dajReligie(0);
 
         if (rel == null)
         {
             rel = new Religia("string", "string");
-            assertEquals(1, rm.Dodaj(rel));
-            rel = rm.DajReligie(0);
+            assertEquals(1, rm.dodaj(rel));
+            rel = rm.dajReligie(0);
         }
 
         Klasztor klasztor = new Klasztor(rel, nazwa, kontakt);
 
         Religia rel2 = new Religia(nazwa2,  kontakt2);
 
-        klasztorManager.UsunWszystko();
+        klasztorManager.usunWszystko();
 
-        assertEquals(1, klasztorManager.Dodaj(klasztor));
+        assertEquals(1, klasztorManager.dodaj(klasztor));
 
-        klasztor = klasztorManager.DajKlasztor(0);
+        klasztor = klasztorManager.dajKlasztor(0);
 
-        assertEquals(1, rm.Dodaj(rel2));
-        rel2 = rm.DajReligie(1);
+        assertEquals(1, rm.dodaj(rel2));
+        rel2 = rm.dajReligie(1);
 
-        klasztorManager.Edytuj(klasztor, rel2, nazwa2, kontakt2);
+        klasztorManager.edytuj(klasztor, rel2, nazwa2, kontakt2);
 
-        List<Klasztor> klasztory = klasztorManager.DajWszystkieDane();
+        List<Klasztor> klasztory = klasztorManager.dajWszystkieDane();
         Klasztor edytowanyKlasztor = klasztory.get(0);
 
         assertEquals(rel2.getId(), edytowanyKlasztor.getReligia().getId());
@@ -96,21 +96,21 @@ public class KlasztorManagerTest {
     public void sprawdzUsun()
     {
         ReligiaManager rm = new ReligiaManager();
-        Religia rel = rm.DajReligie(0);
+        Religia rel = rm.dajReligie(0);
 
         if (rel == null)
         {
             rel = new Religia("string", "string");
-            assertEquals(1, rm.Dodaj(rel));
-            rel = rm.DajReligie(0);
+            assertEquals(1, rm.dodaj(rel));
+            rel = rm.dajReligie(0);
         }
 
         Klasztor klasztor = new Klasztor(rel, nazwa, kontakt);
 
-        klasztorManager.UsunWszystko();
+        klasztorManager.usunWszystko();
 
-        assertEquals(1, klasztorManager.Dodaj(klasztor));
-        assertEquals(0, klasztorManager.Usun(klasztor));
+        assertEquals(1, klasztorManager.dodaj(klasztor));
+        assertEquals(0, klasztorManager.usun(klasztor));
 
     }
 
@@ -118,26 +118,26 @@ public class KlasztorManagerTest {
          public void sprawdzDajWszystkieDane(){
 
         ReligiaManager rm = new ReligiaManager();
-        Religia rel = rm.DajReligie(0);
+        Religia rel = rm.dajReligie(0);
 
         if (rel == null)
         {
             rel = new Religia("string", "string");
-            assertEquals(1, rm.Dodaj(rel));
-            rel = rm.DajReligie(0);
+            assertEquals(1, rm.dodaj(rel));
+            rel = rm.dajReligie(0);
         }
 
         Klasztor klasztor = new Klasztor(rel, nazwa, kontakt);
 
-        klasztorManager.UsunWszystko();
+        klasztorManager.usunWszystko();
 
-        klasztorManager.Dodaj(klasztor);
-        klasztorManager.Dodaj(klasztor);
-        klasztorManager.Dodaj(klasztor);
-        klasztorManager.Dodaj(klasztor);
-        klasztorManager.Dodaj(klasztor);
+        klasztorManager.dodaj(klasztor);
+        klasztorManager.dodaj(klasztor);
+        klasztorManager.dodaj(klasztor);
+        klasztorManager.dodaj(klasztor);
+        klasztorManager.dodaj(klasztor);
 
-        List<Klasztor> klasztory = klasztorManager.DajWszystkieDane();
+        List<Klasztor> klasztory = klasztorManager.dajWszystkieDane();
 
         assertEquals(5, klasztory.size());
 
@@ -147,32 +147,32 @@ public class KlasztorManagerTest {
     public void sprawdzUsunWszystko(){
 
         ReligiaManager rm = new ReligiaManager();
-        Religia rel = rm.DajReligie(0);
+        Religia rel = rm.dajReligie(0);
 
         if (rel == null)
         {
             rel = new Religia("string", "string");
-            assertEquals(1, rm.Dodaj(rel));
-            rel = rm.DajReligie(0);
+            assertEquals(1, rm.dodaj(rel));
+            rel = rm.dajReligie(0);
         }
 
         Klasztor klasztor = new Klasztor(rel, nazwa, kontakt);
 
-        klasztorManager.UsunWszystko();
+        klasztorManager.usunWszystko();
 
-        klasztorManager.Dodaj(klasztor);
-        klasztorManager.Dodaj(klasztor);
-        klasztorManager.Dodaj(klasztor);
-        klasztorManager.Dodaj(klasztor);
-        klasztorManager.Dodaj(klasztor);
+        klasztorManager.dodaj(klasztor);
+        klasztorManager.dodaj(klasztor);
+        klasztorManager.dodaj(klasztor);
+        klasztorManager.dodaj(klasztor);
+        klasztorManager.dodaj(klasztor);
 
-        List<Klasztor> klasztory = klasztorManager.DajWszystkieDane();
+        List<Klasztor> klasztory = klasztorManager.dajWszystkieDane();
 
         assertEquals(5, klasztory.size());
 
-        klasztorManager.UsunWszystko();
+        klasztorManager.usunWszystko();
 
-        klasztory = klasztorManager.DajWszystkieDane();
+        klasztory = klasztorManager.dajWszystkieDane();
 
         assertEquals(0, klasztory.size());
 
@@ -182,28 +182,28 @@ public class KlasztorManagerTest {
     public void sprawdzPrzypiszReligie(){
 
         ReligiaManager rm = new ReligiaManager();
-        Religia rel = rm.DajReligie(0);
+        Religia rel = rm.dajReligie(0);
 
         if (rel == null)
         {
             rel = new Religia("string", "string");
-            assertEquals(1, rm.Dodaj(rel));
-            rel = rm.DajReligie(0);
+            assertEquals(1, rm.dodaj(rel));
+            rel = rm.dajReligie(0);
         }
 
         Klasztor klasztor = new Klasztor(rel, nazwa, kontakt);
 
-        klasztorManager.UsunWszystko();
+        klasztorManager.usunWszystko();
 
-        klasztorManager.Dodaj(klasztor);
+        klasztorManager.dodaj(klasztor);
 
-        List<Klasztor> klasztory = klasztorManager.DajWszystkieDane();
+        List<Klasztor> klasztory = klasztorManager.dajWszystkieDane();
 
         klasztor = klasztory.get(0);
 
-        assertEquals(klasztor.getReligia().getId(), klasztorManager.PrzypiszReligie(klasztor).getId());
-        assertEquals(klasztor.getReligia().getReligia(), klasztorManager.PrzypiszReligie(klasztor).getReligia());
-        assertEquals(klasztor.getReligia().getOpis(), klasztorManager.PrzypiszReligie(klasztor).getOpis());
+        assertEquals(klasztor.getReligia().getId(), klasztorManager.przypiszReligie(klasztor).getId());
+        assertEquals(klasztor.getReligia().getReligia(), klasztorManager.przypiszReligie(klasztor).getReligia());
+        assertEquals(klasztor.getReligia().getOpis(), klasztorManager.przypiszReligie(klasztor).getOpis());
 
     }
 }

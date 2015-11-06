@@ -9,9 +9,7 @@ public class KlasztorManager {
     private Connection con;
     private Statement st;
 
-    private String polacz = "jdbc:sqlserver://eos.inf.ug.edu.pl;databaseName=lmielewczyk;trustServerCertificate=true";
-    private String login = "lmielewczyk";
-    private String haslo = "224701";
+    private String url = "jdbc:jtds:sqlserver://eos.inf.ug.edu.pl;" + "databaseName=lmielewczyk" + ";user=lmielewczyk" + ";password=224701";
 
     private String UtworzTabele = "CREATE TABLE klasztor(id INT IDENTITY(1,1) PRIMARY KEY, id_religia INT REFERENCES religia (id), nazwa  VARCHAR(100), kontakt  VARCHAR(100));";
 
@@ -24,8 +22,7 @@ public class KlasztorManager {
     public KlasztorManager()
     {
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            con = DriverManager.getConnection(polacz, login, haslo);
+            con = DriverManager.getConnection(url);
             st = con.createStatement();
             ResultSet rs = con.getMetaData().getTables(null, null, null, null);
             boolean utworzono = false;
@@ -44,15 +41,14 @@ public class KlasztorManager {
             PSusunWszystko = con.prepareStatement("DELETE FROM klasztor;");
             PSwyswietlWszystko = con.prepareStatement("SELECT * FROM klasztor;");
         } catch (SQLException sqle) {
-        } catch (ClassNotFoundException cnfe) {
         }
     }
 
-    public Connection Polaczenie() {
+    public Connection polaczenie() {
         return con;
     }
 
-    public void UsunWszystko() {
+    public void usunWszystko() {
         try {
             PSusunWszystko.executeUpdate();
         } catch (SQLException e) {
@@ -60,7 +56,7 @@ public class KlasztorManager {
         }
     }
 
-    public int Dodaj(Klasztor klasztor) {
+    public int dodaj(Klasztor klasztor) {
         int ile = 0;
         try {
             PSdodaj.setLong(1, klasztor.getReligia().getId());
@@ -75,7 +71,7 @@ public class KlasztorManager {
         return ile;
     }
 
-    public void Edytuj(Klasztor klasztor, Religia religia, String nazwa, String kontakt) {
+    public void edytuj(Klasztor klasztor, Religia religia, String nazwa, String kontakt) {
         try {
 
             PSedytuj.setLong(1, religia.getId());
@@ -90,7 +86,7 @@ public class KlasztorManager {
         }
     }
 
-    public int Usun(Klasztor klasztor) {
+    public int usun(Klasztor klasztor) {
         int ile = 0;
         try {
             PSusun.setLong(1, klasztor.getId());
@@ -101,14 +97,14 @@ public class KlasztorManager {
         return ile;
     }
 
-    public List<Klasztor> DajWszystkieDane() {
+    public List<Klasztor> dajWszystkieDane() {
         List<Klasztor> klasztory = new ArrayList<Klasztor>();
 
         try {
             ResultSet rs = PSwyswietlWszystko.executeQuery();
             int id, i;
             ReligiaManager rm = new ReligiaManager();
-            List<Religia> religie = rm.DajWszystkieDane();
+            List<Religia> religie = rm.dajWszystkieDane();
             while (rs.next()) {
                 Klasztor k = new Klasztor();
                 k.setId(rs.getInt("id"));
@@ -128,10 +124,10 @@ public class KlasztorManager {
         return klasztory;
     }
 
-    public Religia PrzypiszReligie(Klasztor klasztor) {
+    public Religia przypiszReligie(Klasztor klasztor) {
         int i = 0;
         ReligiaManager rm = new ReligiaManager();
-        List<Religia> religie = rm.DajWszystkieDane();
+        List<Religia> religie = rm.dajWszystkieDane();
         while (i != religie.size() && religie.get(i).getId() != klasztor.getReligia().getId())
             i++;
         if(i != religie.size())
@@ -140,8 +136,8 @@ public class KlasztorManager {
             return null;
     }
 
-    public Klasztor DajKlasztor(int id) {
-        List<Klasztor> klasztory = DajWszystkieDane();
+    public Klasztor dajKlasztor(int id) {
+        List<Klasztor> klasztory = dajWszystkieDane();
         if(klasztory.size() != id)
             return klasztory.get(id);
         else
