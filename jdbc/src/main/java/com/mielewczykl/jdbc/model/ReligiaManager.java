@@ -133,6 +133,21 @@ public class ReligiaManager {
         return klasztoryWybrane;
     }
 
+    public void UsunKlasztory(Religia religia) {
+        try{
+            PreparedStatement PSusunKlasztor = con.prepareStatement("DELETE FROM klasztor WHERE id = ? ;");
+            KlasztorManager km = new KlasztorManager();
+            List<Klasztor> klasztory = km.DajWszystkieDane();
+            for (int i = 0; i < klasztory.size(); i++)
+                if(klasztory.get(i).getReligia().getId() == religia.getId())
+                {
+                    PSusunKlasztor.setLong(1, klasztory.get(i).getId());
+                    PSusunKlasztor.executeUpdate();
+                }
+        } catch (SQLException sqle) {
+        }
+    }
+
     public Religia DajReligie(int id) {
             List<Religia> religie = DajWszystkieDane();
             if(religie.size() != id)

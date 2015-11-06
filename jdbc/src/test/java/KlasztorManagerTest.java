@@ -202,6 +202,8 @@ public class KlasztorManagerTest {
         klasztor = klasztory.get(0);
 
         assertEquals(klasztor.getReligia().getId(), klasztorManager.PrzypiszReligie(klasztor).getId());
+        assertEquals(klasztor.getReligia().getReligia(), klasztorManager.PrzypiszReligie(klasztor).getReligia());
+        assertEquals(klasztor.getReligia().getOpis(), klasztorManager.PrzypiszReligie(klasztor).getOpis());
 
     }
 }
